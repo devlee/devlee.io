@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc -p tsconfig.json",
+    "tsc": "node ./node_modules/typescript/lib/tsc.js -p tsconfig.json",
     "serve": "nodemon ./dist/server/index.js",
     "dev": "npm run tsc & npm run serve",
-    "deploy": "npm run tsc & NODE_ENV=production webpack --config ./dist/webpack/webpack.client.config.js",
+    "deploy": "npm run tsc & node ./node_modules/webpack/bin/webpack.js --config ./dist/webpack/webpack.client.config.js",
     "pm2": "pm2 start ./dist/server/index.js",
     "azure": "npm run deploy"
   },
