@@ -1,0 +1,38 @@
+{
+  "name": "devlee.io",
+  "version": "1.0.0",
+  "description": "devlee.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc -p tsconfig.json",
+    "serve": "nodemon ./dist/server/index.js",
+    "dev": "npm run tsc & npm run serve",
+    "deploy": "npm run tsc & NODE_ENV=production webpack --config ./dist/webpack/webpack.client.config.js",
+    "pm2": "pm2 start ./dist/server/index.js",
+    "azure": "npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlee/devlee.io.git"
+  },
+  "keywords": [
+    "devlee.io"
+  ],
+  "author": "devlee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devlee/devlee.io/issues"
+  },
+  "homepage": "https://github.com/devlee/devlee.io#readme",
+  "dependencies": {
+    "koa": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/webpack": "^3.0.4",
+    "awesome-typescript-loader": "^3.2.1",
+    "typescript": "^2.4.2",
+    "webpack": "^2.7.0"
+  }
+}

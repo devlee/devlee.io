@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "pretty": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "./src/server/index.ts"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}
